@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="402.0" prefWidth="368.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Calculator.FXML_calculatorController">
+    <stylesheets>
+        <URL value="@fxml_calculator.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="45.0" prefWidth="377.0">
+         <children>
+            <Text id="title" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculator" wrappingWidth="192.904296875">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutY="45.0" prefHeight="357.0" prefWidth="377.0">
+         <children>
+            <TextField id="text-field" fx:id="txtCalc" editable="false" layoutX="5.0" prefHeight="92.0" prefWidth="368.0" promptText="0" stylesheets="@fxml_calculator.css">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <GridPane layoutX="7.0" layoutY="99.0" prefHeight="253.0" prefWidth="368.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="txtClear" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="C" textFill="#f4f52c">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txtOpenBraket" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="(" textFill="#f4f52c" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txtClosedBraket" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text=")" textFill="#f4f52c" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txtDivision" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="/" textFill="#f4f52c" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txt7" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="7" textFill="#f4f52c" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txt8" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="8" textFill="#f4f52c" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txt9" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="9" textFill="#f4f52c" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txtMult" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="*" textFill="#f4f52c" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txt4" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="4" textFill="#f4f52c" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txt5" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="5" textFill="#f4f52c" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txt6" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="6" textFill="#f4f52c" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txtMinus" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="-" textFill="#f4f52c" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txt1" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="1" textFill="#f4f52c" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txt2" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="2" textFill="#f4f52c" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txt3" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="3" textFill="#f4f52c" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txtPlus" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="+" textFill="#f4f52c" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txt0" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="0" textFill="#f4f52c" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="txtDot" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="." textFill="#f4f52c" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txtEqual" mnemonicParsing="false" onAction="#handleButtonAction" stylesheets="@fxml_calculator.css" text="=" textFill="#f4f52c" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="txtPower" mnemonicParsing="false" onAction="#handleButtonAction" text="^" textFill="#f4f52c" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
